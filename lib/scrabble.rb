@@ -12,7 +12,7 @@ class Scrabble
 
   def assign_point_value(word, score)
     word_arr = word.upcase.chars
-    word_arr.each { |letter| score += point_values[ letter ] }
+    word_arr.collect { |letter| score += point_values[ letter ] }
     score
   end
 
